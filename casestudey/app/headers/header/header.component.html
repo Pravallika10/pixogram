@@ -1,0 +1,33 @@
+<div class="row mt-4" >
+    <div class="col-sm-3">
+       <div class="d-flex justify-content-start">
+           <img width="150px" style="border-radius: 15%" src="/assets/logo.jpg"  alt="logo">
+       </div>
+    </div>
+    <div class="clo-sm-6">
+        <nav>
+            <ul class="nav nav-tab nav-justified">
+                <li *ngIf="auth.isUserloggedIn()" class="nav-item">
+                    <a class="nav-link bg-primary text-dark" [routerLink]="['/upload']">upload</a>
+                 </li>
+                 <li *ngIf="auth.isUserloggedIn()" class="nav-item">
+                    <a class="nav-link bg-success text-dark" [routerLink]="['/mymedia']">Mymedia</a>
+                 </li>
+                 <li *ngIf="auth.isUserloggedIn()" class="nav-item">
+                    <a class="nav-link bg-warning text-dark" [routerLink]="['/followers']">Followers</a>
+                 </li>
+                 <li class="nav-item">
+                    <a class="nav-link bg-info text-dark" [routerLink]="['/login']">Login</a>
+                 </li>
+                 <li class="nav-item">
+                    <a class="nav-link bg-danger text-dark" [routerLink]="['/registration']">Register</a>
+                 </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="col-sm-3">
+        <div class="d-flex justify-content-end">
+            <button [routerLink]="['/account']" style="background-color:rgb(245,245,245);" type="button" class="p-1 btn w-50">Account</button>
+        </div>
+    </div>   
+</div>
